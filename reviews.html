@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="css/style.css" />    
+
+    <title>Document</title>
+</head>
+<body>
+    
+ <!-- Top Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top  shadow-sm p-2 mb-5 bg-body">
+    <div class="container-fluid">
+
+    <!--Hamburguer button Sidebar-->  
+      <button class="navbar-toggler"  type="button"  data-bs-toggle="offcanvas"  data-bs-target="#sidebar"  aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+      </button>
+
+       <!--Logo/Img mobile screen-->
+        <div>
+          <a class="logoSidebar mt-0 ml-0" id="logoMobile" href="#" ><img src="./Img/TJ.png" height="50px" alt=""></a>
+        </div>
+
+      <div class="collapse navbar-collapse" id="topNavBar">
+        <form class="d-flex mx-auto my-3 my-lg-0    w-50 me-auto">
+          <div class="input-group">            
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">            
+          </div>
+        </form>           
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Logout <i class="bi bi-box-arrow-right"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Settings <i class="bi bi-gear-fill"></i></a>
+          </li>
+        </ul> 
+      </div>   
+    </div>
+  </nav>
+  <!-- Fin Top navbar -->
+
+<!-- Offcanvas/Sidebar -->
+    <div class="offcanvas offcanvas-start sidebar-nav "  tabindex="-1" id="sidebar">
+        <div class="offcanvas-body p-0 mt-2">
+  
+          <a class="logoSidebar mt-3" href="#" id="logoSidebar" ><img src="./Img/TJ.png" height="60px" alt=""></a>
+  
+          <nav class="navbar-dark" id="navSidebar">
+            <ul class="navbar-nav">
+              <!-- Nombre del usuario/nombre de la companía -->
+              <li class="mt-4" id="userName">
+                <a href="#" class="nav-link px-3 active">
+                  <span class="me-2"><i class="bi bi-person-fill"></i></span>
+                  <span>UserName</span>
+                </a>
+              </li>
+  
+              <!--Divisor/Divider-->
+              <li class="my-0"><hr class="dropdown-divider bg-light" /></li>
+              
+              <!--  Main menu -->
+              <li id="itemSidebar">
+                <a class="nav-link px-3 sidebar-link active" data-bs-toggle="collapse" href="#view360" >
+                  <span class="me-2"><i class="bi bi-house-fill"></i></span>
+                  <span>Properties</span>
+                  <span class="ms-auto">
+                    <span class="right-icon">
+                      <i class="bi bi-chevron-down"></i>
+                    </span>
+                  </span>
+                </a>
+                <div class="collapse" id="view360">
+                  <ul class="navbar-nav ps-3">
+                    <li class="mt-0" id="clickHoverBackground">
+                      <a href="./index.html" class="nav-link px-3">                      
+                        <span><small>Hostels</small></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+  
+              <!-- Reviews/menú -->
+              <li id="itemSidebar">
+                <a class="nav-link px-3 sidebar-link active" data-bs-toggle="collapse" href="#roiReviews" id="clickHoverBackground2">
+                  <span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-heart" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12ZM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Z"/>
+                    <path d="M8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+                  </svg></span>
+                  <span>Reviews</span>
+                  <span class="ms-auto">
+                    <span class="right-icon">
+                      <i class="bi bi-chevron-down"></i>
+                    </span>
+                  </span>
+                </a>
+                <div class="collapse" id="roiReviews">
+                  <ul class="navbar-nav ps-3">
+                    <li class="mt-0"  id="clickHoverBackground">
+                      <a href="./reviews.html" class="nav-link px-3">                      
+                        <span><small>Leave a review!</small></span>
+                      </a>
+                    </li>                   
+                  </ul>
+                </div>
+              </li>
+              
+              <!--Divisor/Divider + Help center + Copyright-->
+  
+              <div id="helpYcopyright">          
+                
+                <li class="my-0">
+                  <a href="#" class="nav-link px-3 active">
+                    <span class="me-2"><i class="bi bi-lightbulb-fill"></i></span>
+                    <span>Help Center</span>
+                  </a>
+                  <a href="#" class="nav-link px-3 d-flex" id="copyRightSection">
+                    <span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                      <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+                    </svg></span>
+                    <p><small class="copyRight">2022 Lucio Tjunczyk</small></p>
+                  </a>
+                </li>
+              </div>
+              
+            </ul>
+          </nav>
+        </div>
+    </div>
+<!-- offcanvas -->
+
+
+ <!--Main/Body-->
+
+ <main class="mt-5 pt-3 " id="mainDashboard">    
+    <div class="container-fluid">
+   
+
+      <!--Section Formulario de contacto/Reviews-->    
+      <div class="row">
+        <div class="col-md-12 mt-3">
+          <h4>Dejanos tu comentario!</h4>
+        </div>
+      </div>
+      
+
+      <div class="container">
+        <form action="">
+          <label for="name">Nombre</label>
+          <input type="text" id="fname" name="firstname" placeholder="Escribe tu nombre">          
+               
+          <label for="lname">Email</label>
+          <input type="email" id="mailCliente" name="mail" placeholder="Escribe tu email">      
+               
+          <label for="subject">Escribe tu consulta o mensaje</label>
+          <textarea id="subjectMessaje" name="subject" placeholder="" style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit" id="buttonGuest">
+        </form>        
+   
+      </div>
+  
+     
+
+      <!--Reviews-->
+
+      <div class="row mt-5">
+        <div class="col-md-12 mt-3">
+          <h4>Reviews</h4>
+          <div id="nuestrasReviews" class="reviewsCards"></div>
+        </div>
+      </div>
+
+      <div class="container2">     
+            <div class="row w-100 align-items-center">
+                <div class="col text-center">
+                    <button id="verReviews" class="btn">Ver Reviews</button>            
+                </div>       
+                <div class="col text-center">            
+                    <button id="ocultarReviews" class="btn">Ocultar Reviews</button>
+                </div>       
+            </div>
+      </div>  
+      
+    </div>
+</main>
+
+
+  <!--Sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+
+  <!--Archivos JS de Bootstrap--> 
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/jquery.dataTables.min.js"></script>
+  <script src="./js/dataTables.bootstrap5.min.js"></script>
+
+  <!--Archivos JS propios--> 
+
+  <script src="./js/script.js"></script>
+  <script src="./js/reviews.js"></script>
+</body>
+</html>

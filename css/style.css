@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+
+* {box-sizing: border-box;}
+
+/*SIDEBAR-OFFCANVAS*/
+
+#sidebar{
+  background-color: #4682B4 !important;
+}
+
+:root {
+  --offcanvas-width: 220px;
+  --topNavbarHeight: 0px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+
+  
+  /* sacar backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  } 
+}
+
+.logoSidebar{    
+  margin-left: 10px;
+}
+
+
+#helpYcopyright{
+  position: fixed;
+  bottom: -20px;  
+}
+
+#copyRightSection{
+  margin-top: -15px;
+}
+
+.copyRight{
+  font-size: 11px;
+}
+
+/*efecto hover para elementos del sidebar*/
+
+#itemSidebar{  
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding-bottom: 10px; 
+}
+
+#itemSidebar:hover{
+   background-color: #A7C7E7;
+   opacity: 1;
+}
+
+
+#clickHoverBackground{   
+  margin-right: 15px;
+  border-radius: 5px;  
+}
+
+#clickHoverBackground:hover{
+  background-color: #4682B4;
+}
+
+
+
+/*MAIN*/
+
+#mainDashboard{
+  background-color: #F1F4FD;
+}
+
+
+/*SMART VIEW-DASHBOARD*/
+
+#tetito{
+  height: 753px;
+  overflow-x: hidden !important;
+}
+
+#mapaProperties{
+  height: 750px !important;
+}
+
+#borderCard{
+  border-bottom: 4px solid rgb(8, 185, 8) !important;
+}
+
+#mapaInteractivo{
+  margin-top: -15px;
+}
+
+#map {
+	height: 710px;
+	width: 100%;
+}
+
+#btnFinalReserva{
+  background-color: #4682B4;
+  color: white;
+  font-size: x-large;
+  margin-bottom: 20PX;
+}
+
+/*REVIEWS Y FORMULARIO*/
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=email]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4682B4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #04AA6D;
+}
+
+.container {
+  border-radius: 5px;
+  border: 1px solid #4682B4;
+  background-color: #f2f2f2;
+  padding: 20px;
+  max-width: 100%;
+  width: 50%;
+  max-height: auto;
+  height: auto;
+}
+
+
+.container2 { 
+  padding: 50px 0px 125px 0px;
+  max-width: 100%;
+  width: 80%;
+  max-height: auto;
+  height: auto;
+  margin: 0 auto;   
+}
+
+.container3 { 
+  padding: 20px;
+  max-width: 100%;
+  width: 100%;
+  max-height: auto;
+  height: auto;
+  margin: 0 auto;   
+}
+
+
+
+/*container Reviews*/
+
+.reviewsCards{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+}
+.card{
+margin: 1rem auto;
+}
+
+#verReviews{
+  background-color: #4682B4;
+  color: white;
+}
+#ocultarReviews{
+  background-color: #4682B4;
+  color: white;
+}
+
+
+
+/* MEDIAS QUERYS*/
+
+@media (min-width: 992px) and (max-width: 2560px){
+
+  /*Top Navbar*/
+
+  #logoMobile{
+    visibility: hidden;
+  }  
+}
+
+@media (min-width: 400px) and (max-width: 990px){
+
+  /*Sidebar*/
+
+  #logoSidebar{
+    visibility: hidden;
+  }
+
+  #navSidebar{
+    margin-top: -70px;
+  }
+
+  #userName{
+    margin-left: 25px;
+  }
+
+  /*Top Navbar*/
+
+  #topNavBar{
+    visibility: hidden;
+  }
+}
+
+
+
+
+
